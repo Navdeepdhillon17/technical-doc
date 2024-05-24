@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Technical Docs for SQL</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+  <body>
+  <nav id="navbar">
+    <header id="large-screen-header">SQL Documentation</header>
+    <div id="small-screen-header">SQL Docs</div>
+    <article>
+    <ul>
+      <li> <a class="nav-link" href="#Introduction_to_SQL">Introduction to SQL</a></li>
+      <li><a class="nav-link" href="#What_can_SQL_do?">What can SQL do?</a></li>
+      <li><a class="nav-link" href="#SQL_Syntax">SQL Syntax</a></li>
+      <li><a class="nav-link" href="#Important_SQL_commands">Important SQL commands</a></li> 
+      <li><a class="nav-link" href="#SQL_Select">SQL Select</a></li> 
+      <li><a class="nav-link" href="#Create_table_in_SQL">Create table in SQL</a></li>
+      <li><a class="nav-link" href="#Insert_data_in_SQL">Insert data in SQL</a></li> 
+      <li><a class="nav-link" href="#SQL_update">SQL update</a></li>
+     <li><a class="nav-link" href="#SQL_delete">SQL delete</a></li>   
+     <li><a class="nav-link" href="#reference">Reference</a></li> 
+    </ul>
+    </article>
+  </nav>
+
+    <main id="main-doc">
+
+    <section class="main-section" id="Introduction_to_SQL">
+      <header>Introduction to SQL</header>
+      <article>
+      <p>SQL is a standard language for accessing and manipulating databases.</p>
+      <ul>
+        <li><span class="bold">SQL</span> stands for <span class="bold">S</span>tructured <span class="bold">Q</span>uery <span class="bold">L</span>anguage.</li>
+<li>SQL lets you access and manipulate data in the Relational Database Management Systems (RDBMS).</li>
+<li>SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987.
+      </ul>
+</article>
+    </section>
+
+    <section class="main-section" id="What_can_SQL_do?">
+      <header>What can SQL do?</header>
+      <article>
+      <ul>
+        <li>SQL can execute queries against a database.</li>
+<li>SQL can retrieve data from a database.</li>
+<li>SQL can insert records in a database.</li>
+<li>SQL can update records in a database.</li>
+<li>SQL can delete records from a database.</li>
+<li>SQL can create new databases.</li>
+<li>SQL can create new tables in a database.</li>
+<li>SQL can create stored procedures in a database.</li>
+<li>SQL can create views in a database.</li>
+<li>SQL can set permissions on tables, procedures, and views.</li>
+      </ul>
+       </article>
+    </section>
+
+    <section class="main-section" id="SQL_Syntax">
+      <header>SQL Syntax</header>
+      <article>
+      <p>Most of the actions you need to perform on a database are done with SQL statements.SQL statements consists of keywords that are easy to understand.</p>
+<p>The following SQL statement returns all records from a table named "Customers":</p>
+<div class="example-code">
+  <h4>Example</h4>
+  <code>Select <span  class="bold"> all</span> (*) records from the Customers table:
+<div class="example-box"><span class="blue">SELECT</span> * <span class="blue">FROM</span> Customers;</div></code>
+</div>
+<p><span  class="bold">NOTE:</span> SQL keywords are NOT case sensitive; select is the same as SELECT.</p>
+<p><span  class="bold">Semicolon</span> after SQL Statements?</p>
+<p>Some database systems require a semicolon at the end of each SQL statement.</p>
+<p>Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
+</article>
+    </section>
+
+    <section class="main-section" id="Important_SQL_commands">
+      <header>Important SQL commands</header>
+      <article>
+      <ul>
+        <li><span class="sql-commands">SELECT</span> - Extracts data from a database. </li>
+        <li><span class="sql-commands">UPDATE</span> - Updates data in a database. </li>
+        <li><span class="sql-commands">DELETE</span> - deletes data from a database</li>
+        <li><span class="sql-commands">INSERT INTO</span> - inserts data into database.</li>
+        <li><span class="sql-commands">CREATE DATABASE</span> - creates a new database</li>
+        <li><span class="sql-commands">ALTER DATABASE</span> - modifies a database</li>
+        <li><span class="sql-commands">CREATE TABLE</span> - creates a new table </li>
+        <li><span class="sql-commands">ALTER TABLE</span> - modifies a table</li>
+    </ul>
+    </article>
+    </section>
+
+    <section class="main-section" id="SQL_Select">
+      <header>SQL Select</header>
+      <article>
+      <p>The <span class="sql-commands"> SELECT </span> statement is used to select data from a database.</p>
+     <div class="example-code">
+  <h4>Example</h4>
+  <code>Return data from the Customers table:</p>
+<div class="example-box"><span class="blue">SELECT</span> CustomerName, Phone_number <span class="blue">FROM</span> Customers;</div></code>
+</div>
+<h3>Syntax</h3>
+<code><div class="syntax-box"><span class="blue">SELECT</span> column1, column2, ...<br>
+<span class="blue">FROM</span> table_name;</div></code>
+<p>Here, column1, column2, ... are the <i>field names</i> of the table you want to select data from.</p>
+<p>The table_name represents the name of the <i>table</i> you want to select data from.</p>
+</article>
+    </section>
+
+     <section class="main-section" id="Create_table_in_SQL">
+      <header>Create table in SQL</header>
+      <article>
+      <p>The  <span class="sql-commands"> CREATE TABLE</span> statement is used to create a new table in a database.</p>
+      <div class="example-code">
+  <h4>Example</h4>
+
+<code><p> Create a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:</p>
+<div class="example-box"><span class="blue">CREATE TABLE</span> Persons (</br>
+<div class="space-in-table">
+    PersonID int,</br>
+    LastName varchar(<span class="hotpink">255</span>),</br>
+    FirstName varchar(<span class="hotpink">255</span>),</br>
+    Address varchar(<span class="hotpink">255</span>),</br>
+    City varchar(<span class="hotpink">255</span>)</br>
+</div>
+);</code>
+</div>
+</div>
+<p>The PersonID column is of type int and will hold an integer.</p>
+<p>The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields is 255 characters.</p>
+<h3>Syntax</h3>
+<div class="syntax-box"><span class="blue"><code>CREATE TABLE</span> table_name (<br>
+<div class="space-in-table">
+    column1 datatype,</br>
+    column2 datatype,</br>
+    column3 datatype,</br>
+   ....
+</div>
+);</code>
+</div>
+<p>The column parameters specify the names of the columns of the table.</p>
+<p>The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.).</p>
+</article>
+    </section>
+
+     <section class="main-section" id="Insert_data_in_SQL">
+      <header>Insert data in SQL</header>
+      <article>
+     <p>The <span class="sql-commands"> INSERT INTO</span> statement is used to insert new records in a table.</span>
+     <h3>Syntax</h3>
+     <p>It is possible to write the <span class="sql-commands"> INSERT INTO</span> statement in two ways:</p>
+     <ol>
+       <li>Specify both the column names and the values to be inserted:</li></p>
+      <code> <div class="syntax-box"><span class="blue">INSERT INTO</span> table_name (column1, column2, column3, ...)<br>
+      <span class="blue"> VALUES</span> (value1, value2, value3, ...);</code>
+</div>
+</br>
+       <li>If you are adding values for <u>all</u> the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the <span class="sql-commands"> INSERT INTO</span>  syntax would be as follows:</li></p>
+    <code> <div class="syntax-box"><span class="blue">INSERT INTO</span> table_name <br>
+      <span class="blue"> VALUES</span> (value1, value2, value3, ...);</code>
+</div>
+</ol>
+<p>The following SQL statement inserts a new record in the "Customers" table:</p>
+ <div class="example-code">
+  <h4>Example</h4>
+  <code>
+  <p>Create a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:</p>
+<div class="example-box"><span class="blue">INSERT INTO</span> Customers</br> (CustomerName, City, Country)</br>
+<span class="blue">VALUES</span></br>
+('Cardinal', 'Stavanger', 'Norway');
+</div>
+</code>
+</article>
+    </section>
+
+     <section class="main-section" id="SQL_update">
+      <header>SQL update</header>
+      <article>
+      <p>The <span class="sql-commands"> UPDATE</span>  statement is used to modify the existing records in a table.</p>
+      <h3>Syntax</h3>
+       <code><div class="syntax-box"><span class="blue">UPDATE</span> table_name</br>
+       <span class="blue">SET</span> column1 = value1, column2 = value2, ...<br>
+      <span class="blue">WHERE</span> condition;
+</div></code>
+<div class="yellow-box">
+<span class="bold">Note:</span> Be careful when updating records in a table! The <span class="hotpink">WHERE</span> clause specifies which record(s) should be updated. If you omit the <span class="hotpink">WHERE</span> clause, all records in the table will be updated!
+</div>
+ <div class="example-code">
+  <h4>Example</h4>
+  <code><p>Create a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:</p>
+<div class="example-box"><span class="blue">UPDATE</span> Customers</br>
+       <span class="blue">SET</span> ContactName = 'Alex', City = 'Mohali',<br>
+      <span class="blue">WHERE</span> CustomerId = 1 ;
+</div></code>
+</article>
+    </section>
+
+     <section class="main-section" id="SQL_delete">
+      <header>SQL delete</header>
+      <article>
+      <p>The<span class="sql-commands"> DELETE</span> statement is used to delete existing records in a table.</p>
+      <h3>Syntax</h3>
+      <code>
+       <div class="syntax-box"><span class="blue">DELETE</span> table_name</br>
+      <span class="blue">WHERE</span> condition;
+       </div></code>
+<div class="yellow-box">
+<span class="bold">Note:</span> Be careful when DELETING records in a table! The <span class="hotpink">WHERE</span> clause specifies which record(s) should be deleted. If you omit the <span class="hotpink">WHERE</span> clause, all records in the table will be deleted!
+</div>
+<div class="example-code">
+  <h4>Example</h4><code>
+  <p>Delete the customer "Alfreds Futterkiste" from the "Customers" table:</p>
+<div class="example-box"><span class="blue">DELETE</span> Customers</br>
+      <span class="blue">WHERE</span> CustomerName = 'Alfreds Futterkiste';</code>
+</div>
+</article>
+    </section>
+
+<section  class="main-section" id="reference">
+  <header>Reference</header>
+  <p>All the documentation on this page is taken from <a href="https://www.w3schools.com/sql">w3schools.</a></p>
+  </section> 
+    </main>
+  </body>
+</html>
+
