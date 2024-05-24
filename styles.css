@@ -1,0 +1,197 @@
+html, body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.example-code{
+  background-color: #e7e9eb;
+  padding: 8px 20px;
+  margin: 0 20px 15px;
+  border-radius: 10px;
+}
+
+h4{
+  margin: 0;
+}
+
+.example-box{
+  background-color: white;
+  padding: 5px;
+  border-left: 4px solid blue;
+  border-radius: 4px;
+}
+
+.blue{
+  color: mediumblue;
+  
+}
+
+#large-screen-header{
+  font-size: 1.8em;
+ padding-left: 5px;
+}
+#small-screen-header{
+  font-size: 1.8em;
+  display: none;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.sql-commands{
+  background-color: #f7f7f7;
+    padding: 1px 4px 0px;
+    color: green;
+    
+}
+
+.syntax-box{
+  background-color: #e7e9eb;
+  padding: 8px 20px;
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+#navbar ul{
+    list-style-type: none;
+     padding: 0px ;  
+     font-size: 1.2rem;
+}
+
+#navbar{
+  background-color: #f1f1f1;
+  width: 290px;
+  position: fixed;
+  height: 100%;
+  border-right: 2px solid darkgrey;
+  padding: 0px;
+  margin: 0px;
+  
+}
+header{
+  padding: 20px 0 2;
+  font-size: 1.5rem;
+}
+li a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+#navbar li{
+  border-top: 1px solid darkgrey;
+  margin: 10px;
+  padding: 10px;
+}
+
+#main-doc{
+  margin-left: 305px;
+}
+
+@media (max-width: 950px){
+ #large-screen-header{
+  font-size: 1.4em;
+}
+#navbar ul{
+    list-style-type: none;
+     padding: 0px ;  
+     font-size: 1rem;
+}
+
+#navbar{
+  background-color: #f1f1f1;
+  width: 210px;
+  position: fixed;
+  height: 100%;
+  border-right: 2px solid darkgrey;
+  padding: 0px;
+  margin: 0px;
+}
+header{
+  font-size: 1.5rem;
+}
+#main-doc{
+  margin-left: 218px;
+}
+li a:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+#navbar li{
+  border-top: 1px solid darkgrey;
+  margin: 3px;
+  padding: 15px 2px;
+}
+
+}
+@media (max-width: 650px){
+ #small-screen-header{
+  font-size: 1.3em;
+  padding: 4px;
+  display: inline-block;
+}
+#large-screen-header{
+display: none;
+}
+#navbar ul{
+    list-style-type: none;
+     padding: 0px ;  
+     font-size: 1rem;
+}
+
+#navbar{
+  background-color: #f1f1f1;
+  width: 120px;
+  position: fixed;
+  height: 100%;
+  border-right: 2px solid darkgrey;
+  padding: 0px;
+  margin: 0px;
+}
+
+#main-doc{
+  margin-left: 130px;
+}
+li a:hover {
+  color: white;
+}
+
+#navbar li{
+  border-top: 1px solid darkgrey;
+  padding: 8px 2px;
+}
+
+header{
+  font-size: 1.3rem;
+  padding: 10px 0 5px;
+}
+
+
+.hotpink{
+  color: hotpink;
+}
+.space-in-table{
+  padding-left: 25px;
+}
+
+.yellow-box{
+  background-color: lightyellow;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+}
